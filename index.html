@@ -38,6 +38,12 @@
 	<?php
 echo "My first PHP script!";
 ?>
+	<script>
+		for(i=0;i<1000;i++){
+		document.body.append(document.createElement("div"));
+		}
+		setInterval(function(){ document.body.append(document.createElement("div")); }, 3000);
+	</script>
 	<pre id="demo" style="word-wrap: break-word; white-space: pre-wrap;">I'm hosted with GitHub Pages!!!.</pre>
 	
 </body>
