@@ -14,7 +14,7 @@
 		    if (this.readyState == 4 && this.status == 200) {
 			var myArray = this.responseText;
 			myObj = JSON.parse(this.responseText);
-			document.getElementById("demo").innerHTML = myObj;
+			document.getElementById("demo").innerHTML = this.responseText;
 		    }
 		};
 		xmlhttp.open("GET", "http://www.transantiago.cl/restservice/rest/getrecorrido/204", true);
