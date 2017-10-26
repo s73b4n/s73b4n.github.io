@@ -10,7 +10,7 @@
 		    results = regex.exec(location.search);
 		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
-		
+		document.addEventListener('DOMContentLoaded', function(){ 
     // your code goes here
 		var xmlhttp = new XMLHttpRequest();
 		var myObj;
@@ -24,6 +24,12 @@
 		};
 		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
 		xmlhttp.send();
+		xmlhttp.onload = function(){
+			while(this.readyState != 4){
+				document.createElement("div");
+			}
+		};
+		}, false);	
 	</script>
 </head>
 <body>
