@@ -22,13 +22,12 @@
 			xmlhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
 				var myArray = this.responseText;
-				myObj = JSON.parse(this.responseText);
 				//document.getElementById("demo").innerHTML = this.responseText;
 				document.getElementsByTagName("pre")[0].innerHTML = this.responseText;
 
 			    }
 			};
-			xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/204"+recorrido, false);
+			xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/204"+recorrido, true);
 			xmlhttp.send();
 	</script>
 	
@@ -41,7 +40,7 @@
 		//setInterval(function(){ document.body.append(document.createElement("div")); }, 3000);
 	</script>
 	
-	<pre id="demo" style="word-wrap: break-word; white-space: pre-wrap;">I'm H222STED with GitHub Pages!!!.</pre>	
+	<pre id="demo" style="word-wrap: break-word; white-space: pre-wrap;">I'm H333STED with GitHub Pages!!!.</pre>	
 	
 </body>
 </html>
