@@ -20,7 +20,7 @@
 			var myArray = this.responseText;
 			myObj = JSON.parse(this.responseText);
 			document.getElementById("demo").innerHTML = this.responseText;
-			    window.reload();
+			
 		    }
 		};
 		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
