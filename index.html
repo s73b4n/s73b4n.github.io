@@ -26,7 +26,8 @@
 		xmlhttp.send();
 		xmlhttp.onload = function(){
 			while(this.readyState != 4){
-				document.createElement("div");
+				document.body.append(document.createElement("div"));
+				console.log("hola");
 			}
 		};
 		}, false);	
