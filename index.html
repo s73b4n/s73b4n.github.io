@@ -9,10 +9,11 @@
 	<p id="demo">I'm hosted with GitHub Pages!!!.</p>
 	<script>
 		var xmlhttp = new XMLHttpRequest();
+		var myObj;
 		xmlhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			var myArray = this.responseText;
-			var myObj = JSON.parse(myArray[0]);
+			myObj = JSON.parse(myArray[0]);
 			document.getElementById("demo").innerHTML = myObj.destino;
 		    }
 		};
