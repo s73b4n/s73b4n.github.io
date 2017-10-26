@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My first Github Page</title>
-</head>
-<body>
-	<h1>Hello World</h1>
-	<p id="demo">I'm hosted with GitHub Pages!!!.</p>
 	<script>
-		var xmlhttp = new XMLHttpRequest();
+		document.addEventListener('DOMContentLoaded', function(){ 
+    // your code goes here
+			var xmlhttp = new XMLHttpRequest();
 		var myObj;
 		xmlhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
@@ -19,7 +17,11 @@
 		};
 		xmlhttp.open("GET", "http://www.transantiago.cl/restservice/rest/getrecorrido/204", true);
 		xmlhttp.send();
-	
+		}, false);	
 	</script>
+</head>
+<body>
+	<pre id="demo">I'm hosted with GitHub Pages!!!.</pre>
+	
 </body>
 </html>
