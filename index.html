@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My first Github Page</title>
-	<script>
+	<script defer>
 		function getParameterByName(name) {
 		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
 		    results = regex.exec(location.search);
 		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
-		document.addEventListener('DOMContentLoaded', function(){ 
+		
     // your code goes here
-			var xmlhttp = new XMLHttpRequest();
+		var xmlhttp = new XMLHttpRequest();
 		var myObj;
 		var recorrido = getParameterByName('id');
 		xmlhttp.onreadystatechange = function() {
@@ -24,7 +24,6 @@
 		};
 		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
 		xmlhttp.send();
-		}, false);	
 	</script>
 </head>
 <body>
