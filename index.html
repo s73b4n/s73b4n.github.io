@@ -17,7 +17,7 @@
     		// your code goes here
 			var xmlhttp = new XMLHttpRequest();
 			var myObj;
-			var recorrido = getParameterByName('id');
+			//var recorrido = getParameterByName('id');
 			xmlhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
 				var myArray = this.responseText;
@@ -26,7 +26,7 @@
 
 			    }
 			};
-			xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
+			xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/204"+recorrido, true);
 			xmlhttp.send();
 	</script>
 	<pre id="demo" style="word-wrap: break-word; white-space: pre-wrap;">I'm H23STED with GitHub Pages!!!.</pre>
