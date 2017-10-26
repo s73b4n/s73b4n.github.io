@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My first Github Page</title>
-	<script defer>
+	<script>
 		function getParameterByName(name) {
 		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -11,26 +11,26 @@
 		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
 		document.addEventListener('DOMContentLoaded', function(){ 
-    // your code goes here
-		var xmlhttp = new XMLHttpRequest();
-		var myObj;
-		var recorrido = getParameterByName('id');
-		xmlhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-			var myArray = this.responseText;
-			myObj = JSON.parse(this.responseText);
-			document.getElementById("demo").innerHTML = this.responseText;
-			
-		    }
-		};
-		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
-		xmlhttp.send();
-		xmlhttp.onload = function(){
-			
-				document.body.append(document.createElement("div"));
-				console.log("hola");
-			
-		};
+    		// your code goes here
+			var xmlhttp = new XMLHttpRequest();
+			var myObj;
+			var recorrido = getParameterByName('id');
+			xmlhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+				var myArray = this.responseText;
+				myObj = JSON.parse(this.responseText);
+				document.getElementById("demo").innerHTML = this.responseText;
+
+			    }
+			};
+			xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
+			xmlhttp.send();
+			xmlhttp.onload = function(){
+
+					document.body.append(document.createElement("div"));
+					console.log("hola");
+
+			};
 		}, false);	
 	</script>
 </head>
