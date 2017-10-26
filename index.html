@@ -4,10 +4,17 @@
 	<meta charset="UTF-8">
 	<title>My first Github Page</title>
 	<script>
+		function getParameterByName(name) {
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		    results = regex.exec(location.search);
+		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
 		document.addEventListener('DOMContentLoaded', function(){ 
     // your code goes here
 			var xmlhttp = new XMLHttpRequest();
 		var myObj;
+		var recorrido = getParameterByName('id');
 		xmlhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			var myArray = this.responseText;
@@ -15,7 +22,7 @@
 			document.getElementById("demo").innerHTML = this.responseText;
 		    }
 		};
-		xmlhttp.open("GET", "http://www.transantiago.cl/restservice/rest/getrecorrido/204", true);
+		xmlhttp.open("GET", "http://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
 		xmlhttp.send();
 		}, false);	
 	</script>
