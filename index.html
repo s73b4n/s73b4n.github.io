@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>My first Github Page</title>
 	<script defer>
+		window.stop();
 		function getParameterByName(name) {
 		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -20,6 +21,7 @@
 			var myArray = this.responseText;
 			myObj = JSON.parse(this.responseText);
 			document.getElementById("demo").innerHTML = this.responseText;
+			    window.reload();
 		    }
 		};
 		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
