@@ -6,6 +6,18 @@
 </head>
 <body>
 	<h1>Hello World</h1>
-	<p>I'm hosted with GitHub Pages.</p>
+	<p id="demo">I'm hosted with GitHub Pages.</p>
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			document.getElementById("demo").innerHTML = myObj.name;
+		    }
+		};
+		xmlhttp.open("GET", "http://www.transantiago.cl/restservice/rest/getrecorrido/204", true);
+		xmlhttp.send();
+	
+	</script>
 </body>
 </html>
