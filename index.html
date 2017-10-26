@@ -23,7 +23,8 @@
 			    if (this.readyState == 4 && this.status == 200) {
 				var myArray = this.responseText;
 				myObj = JSON.parse(this.responseText);
-				document.getElementById("demo").innerHTML = this.responseText;
+				//document.getElementById("demo").innerHTML = this.responseText;
+				document.getElementsByTagName("pre")[0].innerHTML = this.responseText;
 
 			    }
 			};
