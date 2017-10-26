@@ -25,10 +25,10 @@
 		xmlhttp.open("GET", "https://www.transantiago.cl/restservice/rest/getrecorrido/"+recorrido, true);
 		xmlhttp.send();
 		xmlhttp.onload = function(){
-			while(this.readyState != 4){
+			
 				document.body.append(document.createElement("div"));
 				console.log("hola");
-			}
+			
 		};
 		}, false);	
 	</script>
